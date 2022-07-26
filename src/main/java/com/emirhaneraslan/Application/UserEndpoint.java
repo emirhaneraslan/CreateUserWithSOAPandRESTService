@@ -27,7 +27,7 @@ public class UserEndpoint {
         BeanUtils.copyProperties(request.getUserInfo(), user);
         userService.AddUser(user);
         serviceStatus.setStatus("Başarılı");
-        serviceStatus.setMessage("İçerik Başarıyla Silindi.");
+        serviceStatus.setMessage("İçerik Başarıyla Eklendi.");
         response.setServiceStatus(serviceStatus);
         return response;
     }
@@ -50,7 +50,7 @@ public class UserEndpoint {
         userService.updateUser(user);
         ServiceStatus serviceStatus = new ServiceStatus();
         serviceStatus.setStatus("Başarılı");
-        serviceStatus.setMessage("İçerik Başarıyla Silindi.");
+        serviceStatus.setMessage("İçerik Başarıyla Güncellendi.");
         UpdateUserResponse response = new UpdateUserResponse();
         response.setServiceStatus(serviceStatus);
         return response;
